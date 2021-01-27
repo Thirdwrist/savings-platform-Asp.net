@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -22,6 +23,10 @@ namespace SavingsPlatformASP.net.Models
         [Required]
         [Column(TypeName = "varchar(500)")]
         public String Password { get; set; }
+
+        public List<Wallet> Wallet {get; set;}
+        public List<WalletFund> WalletFund {get; set;}
+
 
        
     }

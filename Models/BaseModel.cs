@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SavingsPlatformASP.net.Models
 {
-    public class BaseModel
+    public abstract class BaseModel
     {
         [Required]
         public int Id { get; set; }

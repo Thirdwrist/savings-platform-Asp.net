@@ -1,13 +1,9 @@
-﻿using System.Security.Claims;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace SavingsPlatformASP.net.JWTAuthentication
 {
-    public class ApplicationUser
+    public class ApplicationUser : IdentityUser
     {
-        public ApplicationUser()
-        {
-        }
-
-        public ClaimsIdentity UserName { get; internal set; }
+      
     }
 }

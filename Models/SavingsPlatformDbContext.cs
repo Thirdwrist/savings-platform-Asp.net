@@ -1,12 +1,17 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using SavingsPlatformASP.net.JWTAuthentication;
 
 namespace SavingsPlatformASP.net.Models
 {
-    public class SavingsPlatformDbContext : DbContext
+    public class SavingsPlatformDbContext : IdentityDbContext<ApplicationUser>
     {
         public SavingsPlatformDbContext(DbContextOptions<SavingsPlatformDbContext> options) : base(options)
         {
+        }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
         }
 
         public DbSet<Bank> Bank { get; set; }

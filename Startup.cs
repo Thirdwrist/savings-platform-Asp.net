@@ -43,8 +43,8 @@ namespace SavingsPlatformASP.net
                             .CharSetBehavior(CharSetBehavior.NeverAppend))
                     // Everything from this point on is optional but helps with debugging.
                     .EnableSensitiveDataLogging()
-                    .EnableDetailedErrors();
-            ));
+                    .EnableDetailedErrors()
+            );
 
             //services.AddDbContext<SavingsPlatformDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConnStr")));
 

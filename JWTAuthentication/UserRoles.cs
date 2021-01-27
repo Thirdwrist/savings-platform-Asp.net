@@ -1,10 +1,9 @@
 ﻿using System;
 namespace SavingsPlatformASP.net.JWTAuthentication
 {
-    public class UserRoles
+    public static class UserRoles
     {
-        public UserRoles()
-        {
-        }
+        public const string Admin = "Admin";
+        public const string User = "User";
     }
 }
